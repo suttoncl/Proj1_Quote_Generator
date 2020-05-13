@@ -46,7 +46,7 @@ var quotes = [
 //console.log(quotes);
 
 var displayed_quote; 
-var object_elements_message = '';
+var object_elements_message;
 
 /***
  * `getRandomQuote` function
@@ -71,6 +71,7 @@ function getRandomQuote() {
 ***/
 function printQuote(){
   displayed_quote = getRandomQuote();
+  object_elements_message = '';
   object_elements_message += '<p class="quote">' + displayed_quote.quote + '</p>'; 
   object_elements_message += '<p class="source">' + displayed_quote.source ;
   if("citation" in displayed_quote){
